@@ -109,26 +109,20 @@ Q(t+1)=T′Q(t)+TQ(t)′
 ### PROGRAM 
 /*
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by:Manoj Choudhary V
+RegisterNumber:212221240025  
 */
-
-
-
-
-
-
-### RTL LOGIC FOR FLIPFLOPS 
-
-
-
-
-
-
-
-
-
-### TIMING DIGRAMS FOR FLIP FLOPS 
+```
+module de05(S,R,CLK,Q,QBAR);
+input S,R,CLK;
+output Q,QBAR;
+wire X,Y;
+nand(X,S,CLK);
+nand(Y,R,CLK);
+nand(Q,X,QBAR);
+nand(QBAR,Y,Q);
+endmodule
+```
 
 
 
@@ -136,5 +130,79 @@ RegisterNumber:
 
 
 
+### RTL LOGIC: 
+![](1.png)
+### TIMING DIGRAMS:
+![](2.png)
+# JK FLIPFLOP
+## PROGRAM:
+/*
+Program for JK flipflop and verify its truth table in quartus using Verilog programming.
+Developed by:MANOJ CHOUDHARY V
+RegisterNumber:  212221240025
+/*
+```
+```
+module de051(J,K,CLK,Q,QBAR);
+input J,K,CLK;
+output Q,QBAR;
+wire P,S;
+nand(P,J,CLK,QBAR);
+nand(S,K,CLK,Q);
+nand(Q,P,QBAR);
+nand(QBAR,S,Q);
+endmodule
+```
+### RTL LOGIC: 
+![](3.png)
+### TIMING DIGRAMS:
+![](4.png)
+
+# D FLIPFLOP
+## PROGRAM:
+/*
+Program for D flipflop and verify its truth table in quartus using Verilog programming.
+Developed by: MANOJ CHOUDHARY V
+RegisterNumber:  212221240025
+*/
+```
+module de052(D,CLK,Q,QBAR);
+input D,CLK;
+output Q,QBAR;
+assign DBAR=~D;
+wire X,Y;
+nand(X,D,CLK);
+nand(Y,DBAR,CLK);
+nand(Q,X,QBAR);
+nand(QBAR,Y,Q);
+endmodule
+```
+## RTL LOGIC:
+![](5.png)
+## TIMING DIAGRAM:
+![](6.png)
+# T FLIPFLOP
+## PROGRAM:
+*/
+Program for T flipflop and verify its truth table in quartus using Verilog programming.
+Developed by:MANOJ CHOUDHARY V
+RegisterNumber:  212221240025
+*/
+```
+module de54(T,CLK,Q,QBAR);
+input T,CLK;
+output Q,QBAR;
+wire S,R;
+nand(S,T,CLK,QBAR);
+nand(R,T,CLK,Q);
+nand(Q,S,QBAR);
+nand(QBAR,R,Q);
+endmodule
+```
+## RTL LOGIC:
+![](7.png)
+## TIMING DIAGRAM:
+![](8.png)
 
 ### RESULTS 
+Hence all the flipflops are implemented using verilog and their functionality has been validated using their functional tables.
