@@ -102,17 +102,21 @@ Q(t+1)=T′Q(t)+TQ(t)′
 ⇒Q(t+1)=T⊕Q(t)
 
 ### Procedure
-/* write all the steps invloved */
+1. Create a project with required entities.
+2. Create a module along with respective file name.
+3. Run the respective programs for the given boolean equations.
+4. Run the module and get the respective RTL outputs.
+5. Create university program(VWF) for getting timing diagram.
+6. Give the respective inputs for timing diagram and obtain the results.
 
 
 
 ### PROGRAM 
-/*
+```
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
 Developed by:Manoj Choudhary V
 RegisterNumber:212221240025  
-*/
-```
+
 module de05(S,R,CLK,Q,QBAR);
 input S,R,CLK;
 output Q,QBAR;
@@ -123,26 +127,17 @@ nand(Q,X,QBAR);
 nand(QBAR,Y,Q);
 endmodule
 ```
-
-
-
-
-
-
-
 ### RTL LOGIC: 
 ![](1.png)
 ### TIMING DIGRAMS:
 ![](2.png)
 # JK FLIPFLOP
 ## PROGRAM:
-/*
+```
 Program for JK flipflop and verify its truth table in quartus using Verilog programming.
 Developed by:MANOJ CHOUDHARY V
 RegisterNumber:  212221240025
-/*
-```
-```
+
 module de051(J,K,CLK,Q,QBAR);
 input J,K,CLK;
 output Q,QBAR;
@@ -160,12 +155,10 @@ endmodule
 
 # D FLIPFLOP
 ## PROGRAM:
-/*
+```
 Program for D flipflop and verify its truth table in quartus using Verilog programming.
 Developed by: MANOJ CHOUDHARY V
 RegisterNumber:  212221240025
-*/
-```
 module de052(D,CLK,Q,QBAR);
 input D,CLK;
 output Q,QBAR;
@@ -183,12 +176,11 @@ endmodule
 ![](6.png)
 # T FLIPFLOP
 ## PROGRAM:
-*/
+```
 Program for T flipflop and verify its truth table in quartus using Verilog programming.
 Developed by:MANOJ CHOUDHARY V
 RegisterNumber:  212221240025
-*/
-```
+
 module de54(T,CLK,Q,QBAR);
 input T,CLK;
 output Q,QBAR;
